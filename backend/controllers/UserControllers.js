@@ -8,7 +8,7 @@ export const getUsers = async (req,res) => {
     res.status(500).json({message: error.message});
   }
  }
-export const getUsersById = async (req,res) => {
+export const getUserById = async (req,res) => {
   try {
     const user = await User.findById( req.params.id );
     res.json(user);
